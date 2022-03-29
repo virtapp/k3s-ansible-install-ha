@@ -30,7 +30,7 @@ pipeline {
                 //sh 'sudo ansible-playbook deploy-ieopetclinic-dev.yaml'
                 //ansiblePlaybook installation: 'ansible', playbook: '/root/ansible-oc-jenkinsfile/deploy-ieopetclinic-dev.yaml'
                   sh ' echo "starting Ansible Build and deploy"'
-                  sh "cd /tmp/k3s-deploy && deploy.sh"
+                  sh "cd /tmp/k3s-deploy/k3s-ansible-install-ha && deploy.sh"
             }
         }
     }

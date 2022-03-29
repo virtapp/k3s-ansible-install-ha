@@ -14,7 +14,8 @@ pipeline {
                 //sh 'sudo ansible-playbook deploy-ieopetclinic-dev.yaml'
                 //ansiblePlaybook installation: 'ansible', playbook: '/root/ansible-oc-jenkinsfile/deploy-ieopetclinic-dev.yaml'
                   sh ' echo "Ansible Build and deploy"'
-                  sh "cd /tmp/ && sudo mkdir k3s-deploy"
+                  sh "cd /tmp/ && sudo rm -rf k3s-deploy"
+                  sh "cd /tmp/ && mkdir k3s-deploy"
               
             }  
         }
@@ -29,7 +30,7 @@ pipeline {
                 //sh 'sudo ansible-playbook deploy-ieopetclinic-dev.yaml'
                 //ansiblePlaybook installation: 'ansible', playbook: '/root/ansible-oc-jenkinsfile/deploy-ieopetclinic-dev.yaml'
                   sh ' echo "starting Ansible Build and deploy"'
-                  sh "cd /tmp/k3s-deploy && ansible-playbook site.yml -i inventory/sample/hosts.ini"
+                  sh "cd /tmp/k3s-deploy && deploy.sh"
             }
         }
     }

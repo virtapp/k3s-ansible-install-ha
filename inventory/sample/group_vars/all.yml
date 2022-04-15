@@ -1,5 +1,5 @@
 ---
-k3s_version: v1.23.4+k3s1
+k3s_version: v1.21.5+k3s2   #k3s_version: v1.23.4+k3s1
 ansible_user: ubuntu
 ansible_sudo_pass: ubuntu
 systemd_dir: /etc/systemd/system
